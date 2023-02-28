@@ -1,0 +1,32 @@
+{
+  "name": "my-stack-template",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "run:api": "nodemon --watch api api/server.ts",
+    "run:webapp": "vite serve webapp",
+    "run:docker:dev": "docker compose -f ./docker-compose.dev.yml up",
+    "run:docker:prod": "docker compose -f docker-compose.yml up",
+    "build:webapp": "vue-tsc -p ./webapp/tsconfig.json && vite build webapp",
+    "build:api": "tsc -p ./api/tsconfig.json",
+    "build": "pnpx rimraf dist && npm run build:api && npm run build:webapp"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.14.2",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4",
+    "vue-tsc": "^1.2.0"
+  }
+}

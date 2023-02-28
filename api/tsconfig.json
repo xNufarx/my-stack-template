@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "outDir": "../dist",
+    "strict": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true
+  }
+}
